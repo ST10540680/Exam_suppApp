@@ -1,5 +1,6 @@
 package com.example.partypreptrackerapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -51,26 +52,55 @@ class MainActivity : AppCompatActivity() {
         val snackID = findViewById<EditText>(R.id.SnackID)
         val addItemBtnID = findViewById<Button>(R.id.AddItemBtnID)
 
+        //linking implicitly by their index positions (
+        val itemDetails = arrayOf("","","")
+        val itemCategories = arrayOf("","","")
+        val itemQuantities = arrayOf(0,0,0)
+        val itemComments = arrayOf("","","")
+
         // setting on click listener
         addItemBtnID?.setOnClickListener {
-            val supply = suppliesID?.text?.toString() ?: ""
-            val beverage = beveragesID?.text?.toString() ?: ""
-            val snack = snackID?.text?.toString() ?: ""
+            val supplyName = suppliesID?.text?.toString() ?: ""
+            val beverageName = beveragesID?.text?.toString() ?: ""
+            val snackName = snackID?.text?.toString() ?: ""
+
+            //Populating Index 0: supplies
+            itemDetails[0]= supplyName
+            itemCategories[0] = "Supplies"
+            itemQuantities[0] = 50
+            itemComments[0] = "Red ones for the theme"
+
+            // Populating Index 1: beverages
+            itemDetails[1] = beverageName
+            itemCategories[1] = "Beverages"
+            itemQuantities[1] = 10
+            itemComments[1] = "mix of cola and orange"
+
+            // Populating Index 2: Snacks
+            itemDetails[2] =snackName
+            itemCategories[2] ="Snacks"
+            itemQuantities[2] = 5
+            itemComments[2] = "Large bags only"
+
+            val intent = Intent(this@MainActivity, DetailsViewActivity::class.java).apply {
+                putExtra("EXTRA_DETAILS", itemDetails)
+                putExtra("EXTRA_CATEGORIES", itemCategories)
+                // Quantities must be converted to IntArray to pass smoothly through intent
+                putExtra("EXTRA_QUANTITIES", itemQuantities.toIntArray())
+                putExtra("EXTRA_COMMENTS", itemComments)
+            }
+
+            // 4. LAUNCH THE SECOND SCREEN
+            startActivity(intent)
 
             // Using the Item class to satisfy the unused class warning
-            val newItem = Item(supply, "Misc", 1, "Added via UI")
+            val Item = Item(itemDetails[0], itemCategories[0], itemQuantities[0], "")
 
             Toast.makeText(
                 this@MainActivity,
-                "Added: ${newItem.name}. Supplies: $supply, Bev: $beverage, Snack: $snack",
+                "Stored! Index 0: ${itemDetails[0]} (${itemCategories[0]}, Qty: ${itemQuantities[0]}) | Index 1: ${itemDetails[1]} | Index 2: ${itemDetails[2]}",
                 Toast.LENGTH_LONG,
-            ).show()
-
-            // declaration
-            val items = arrayOf("Paper Cups", "Soda Bottles", "Potato Chips")
-
-            //Updating elements
-            items[2] = "Soda Bottles"
+                ).show()
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
