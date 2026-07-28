@@ -5,5 +5,8 @@
         //Your normal app styles
     </style>
 
-    //
+    //Splash screen theme
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        //
+    </style>
 </resources>
