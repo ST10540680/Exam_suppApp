@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //Base application theme
+    <style name= 'theme.PartyPrepTracker' parent="Theme.Material3.DayNight.NoActionBar">
+        //Your normal app styles
+    </style>
+
+    //
+</resources>
