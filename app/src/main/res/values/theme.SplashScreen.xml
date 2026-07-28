@@ -9,5 +9,8 @@
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
         //setting the background color
         <item name="windowSplashScreenBackground">@color/white</item>
+
+        //theme to switch to after the splash screen is dismissed
+        <item name="postSplashScreenTheme">@style/Theme.PartyPrepTrackerApp</item>
     </style>
 </resources>
