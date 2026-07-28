@@ -39,4 +39,6 @@ Ai tools were used for guidance and concept clarification. all decisions, implem
 the following AI tools were used:
 -Gemini(Google)
 
-
+#refering list
+-Google. 2026. Gemini. [Generative artificial intelligence tool]. Available at: https://gemini.google.com/ [Accessed: 28 july 2026].
+-The Independent Institute of Education (IIE). 2026. Introduction to Mobile Application Development (IMAD). [Module guide]. Emeris. Available via: IIE student portal (Learn)https://advtechonline.sharepoint.com/:w:/r/sites/TertiaryStudents/_layouts/15/Doc.aspx?sourcedoc=%7BCA5A47EE-F107-44AD-AB60-6E296E0B3EAE%7D&file=IMAD5112MM.docx&action=default&mobileredirect=true [Accessed: 28 July 2026].
