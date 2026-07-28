@@ -7,13 +7,41 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/SuppliesID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:ems="10"
+        android:inputType="text"
+        android:text="Supplies"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="197dp" />
 
+    <Button
+        android:id="@+id/AddItemBtnID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Item"
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="394dp" />
+
+    <EditText
+        android:id="@+id/BeveragesID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Beverage"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="257dp" />
+
+    <EditText
+        android:id="@+id/SnackID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Snack"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="315dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
