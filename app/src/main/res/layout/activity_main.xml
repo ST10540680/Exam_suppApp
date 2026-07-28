@@ -9,39 +9,50 @@
 
     <EditText
         android:id="@+id/SuppliesID"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
+        android:hint="@string/hint_supplies"
         android:inputType="text"
-        android:text="Supplies"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="197dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/BeveragesID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/hint_beverage"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/SuppliesID"
+        app:layout_constraintStart_toStartOf="@+id/SuppliesID"
+        app:layout_constraintTop_toBottomOf="@+id/SuppliesID" />
+
+    <EditText
+        android:id="@+id/SnackID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/hint_snack"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/BeveragesID"
+        app:layout_constraintStart_toStartOf="@+id/BeveragesID"
+        app:layout_constraintTop_toBottomOf="@+id/BeveragesID" />
 
     <Button
         android:id="@+id/AddItemBtnID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Item"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="394dp" />
+        android:layout_marginTop="32dp"
+        android:text="@string/btn_add_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SnackID" />
 
-    <EditText
-        android:id="@+id/BeveragesID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Beverage"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="257dp" />
-
-    <EditText
-        android:id="@+id/SnackID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Snack"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="315dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

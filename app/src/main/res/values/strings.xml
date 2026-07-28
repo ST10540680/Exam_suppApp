@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">PartyPrepTrackerApp</string>
     <string name="PartyPrepTrackApp">PartyPrepTrackerApp</string>
+    <string name="hint_supplies">Supplies</string>
+    <string name="hint_beverage">Beverage</string>
+    <string name="hint_snack">Snack</string>
+    <string name="btn_add_item">Add Item</string>
 </resources>
